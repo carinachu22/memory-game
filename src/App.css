@@ -1,0 +1,47 @@
+/* Container for the entire app */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the game board horizontally */
+  height: 100vh; /* Make the app container take the full height of the viewport */
+  width: 100vw;
+  padding: 20px;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.header {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 10;
+  left: 0;
+}
+
+/* Prevent scrolling on the body */
+body {
+  margin: 0;
+  overflow: hidden; /* Hide overflow */
+}
+.game-title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Cards container styling */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
+  row-gap: 40px; /* Increase vertical spacing */
+  column-gap: 30px; /* Maintain horizontal spacing */
+  flex-grow: 1; /* Allow the grid to grow and take the remaining space */
+  margin-top: 120px; /* Adjust this if the header height changes */
+  padding: 0 20px;
+  height: calc(100vh - 160px); /* Viewport height minus header */
+  width: 100%; /* Take full width */
+  box-sizing: border-box;
+  grid-auto-rows: 1fr; /* Ensure rows scale equally */
+}
